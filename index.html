@@ -1,116 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pranesh S A</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
-    .header {
-      background-color: #2b2d42;
-      color: #ffffff;
-      padding: 20px;
-      text-align: center;
-    }
-    .header img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    .info {
-      padding: 20px;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      font-family: "Lato", sans-serif;
-      margin: 0;
-    }
-    h1 {
-      font-size: 36px;
-      margin-top: 20px;
-    }
-    h2 {
-      font-size: 24px;
-      margin-top: 10px;
-    }
-    .fa {
-      margin-right: 5px;
-    }
-    .btn {
-      display: inline-block;
-      background-color: #2b2d42;
-      color: #ffffff;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      margin-top: 10px;
-    }
-    .btn:hover {
-      background-color: #1d1f2f;
-    }
-  </style>
+	<title>Pranesh S A - vCard</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		body {
+			font-family: Arial, sans-serif;
+			padding: 20px;
+		}
+		h1 {
+			margin-top: 0;
+		}
+	</style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <img class="photo" src="praneshsa.jpg" alt="Pranesh S A" width="200" height="200">
-      <h1>Pranesh S A</h1>
-      <h2>KTS TEX | KTS HANDLOOMS</h2>
-    </div>
-    <div class="info">
-      <h3>Contact Information</h3>
-      <ul>
-        <li><i class="fa fa-envelope"></i> Personal Email: sapranesh27@gmail.com</li>
-        <li><i class="fa fa-envelope"></i> Work Email: ktstexdplm@gmail.com</li>
-        <li><i class="fa fa-envelope"></i> Work Email: ktshandloomsdplm@gmail.com</li>
-        <li><i class="fa fa-phone"></i> Cell: 7010052045</li>
-        <li><i class="fa fa-map-marker"></i> Address: KTS Textile, 10/77, Rajiv Nagar, Doddampalayam, Tamil Nadu, 638451</li>
-      </ul>
-      <h3
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-sm-6">
-          <div class="card text-center card-profile">
-            <div class="card-header" style="background-image: url(assets/img/placeholder.jpg);">
-              <div class="profile-picture">
-                <div class="avatar avatar-xl">
-                  <img src="assets/img/praneshsa.jpg" alt="Profile Picture" class="avatar-img rounded-circle">
-                </div>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="profile-name">
-                <h3 class="mb-3">{{ first_name }} {{ last_name }}</h3>
-                <h5>{{ organization }}</h5>
-              </div>
-              <div class="profile-contact">
-                <ul class="list-unstyled mt-3">
-                  <li class="mb-2"><i class="fa fa-envelope fa-fw"></i><a href="mailto:{{ personal_email }}">{{ personal_email }}</a></li>
-                  <li class="mb-2"><i class="fa fa-envelope fa-fw"></i><a href="mailto:{{ work_email_1 }}">{{ work_email_1 }}</a></li>
-                  <li class="mb-2"><i class="fa fa-envelope fa-fw"></i><a href="mailto:{{ work_email_2 }}">{{ work_email_2 }}</a></li>
-                  <li class="mb-2"><i class="fa fa-phone fa-fw"></i><a href="tel:{{ cell }}">{{ cell }}</a></li>
-                  <li class="mb-2"><i class="fa fa-map-marker fa-fw"></i>{{ address_street }}, {{ address_city }}, {{ address_state }} {{ address_zip }}</li>
-                  <li class="mb-2"><i class="fa fa-link fa-fw"></i><a href="{{ webpage }}" target="_blank">{{ webpage }}</a></li>
-                  <li class="mb-2"><i class="fa fa-instagram fa-fw"></i><a href="{{ instagram }}" target="_blank">{{ instagram }}</a></li>
-                  <li class="mb-2"><i class="fa fa-linkedin fa-fw"></i><a href="{{ linkedin }}" target="_blank">{{ linkedin }}</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="card-footer">
-              <a href="mailto:{{ personal_email }}" class="btn btn-outline-dark btn-block"><i class="fa fa-envelope fa-fw"></i> Save to Contacts</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <img class="photo" src="praneshsa.jpg" alt="Pranesh S A" width="200" height="200">
+	<h1>Pranesh S A</h1>
+	<p>Organization: KTS TEX | KTS HANDLOOMS</p>
+	<p>Personal Email: sapranesh27@gmail.com</p>
+	<p>Work Email: ktstexdplm@gmail.com</p>
+	<p>Work Email: ktshandloomsdplm@gmail.com</p>
+	<p>Cell: 7010052045</p>
+	<p>Address:<br>
+	Street - KTS Textile, 10/77, Rajiv Nagar<br>
+	City - Doddampalayam<br>
+	State - Tamil Nadu<br>
+	Zip - 638451</p>
+	<p>Social:<br>
+	Webpage - <a href="https://g.page/KTS-TEX">https://g.page/KTS-TEX</a><br>
+	Instagram - <a href="https://www.instagram.com/thatz.what.she.said">https://www.instagram.com/thatz.what.she.said</a><br>
+	LinkedIn - <a href="https://www.linkedin.com/in/praneshsa">https://www.linkedin.com/in/praneshsa</a></p>
+	<button onclick="saveContact()">Save to Contacts</button>
+	<script>
+		function saveContact() {
+			var contact = {
+				'firstName': 'Pranesh',
+				'lastName': 'S A',
+				'email': 'sapranesh27@gmail.com',
+				'workEmail': ['ktstexdplm@gmail.com', 'ktshandloomsdplm@gmail.com'],
+				'phone': '7010052045',
+				'address': {
+					'street': 'KTS Textile, 10/77, Rajiv Nagar',
+					'city': 'Doddampalayam',
+					'state': 'Tamil Nadu',
+					'zip': '638451'
+				},
+				'social': {
+					'webpage': 'https://g.page/KTS-TEX',
+					'instagram': 'https://www.instagram.com/thatz.what.she.said',
+					'linkedin': 'https://www.linkedin.com/in/praneshsa'
+				}
+			};
+			var blob = new Blob([JSON.stringify(contact)], {type: 'application/json'});
+			var url = URL.createObjectURL(blob);
+			var a = document.createElement('a');
+			a.href = 'data:application/json,' + encodeURIComponent(JSON.stringify(contact));
+			a.download = 'contact.json';
+			a.click();
+		}
+	</script>
+</body>
+</html>
