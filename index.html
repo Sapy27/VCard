@@ -1,60 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Pranesh S A - Vcard</title>
+  <title>Pranesh S A's vCard</title>
 </head>
 <body>
-  <div class="container">
-    <div class="left">
-      <div class="photo">
-        <img src="praneshsa.jpg" alt="Pranesh S A">
-      </div>
-      <div class="name">Pranesh S A</div>
-      <div class="org">KTS TEX | KTS HANDLOOMS</div>
-      <div class="address">
-        <p>KTS Textile, 10/77, Rajiv Nagar</p>
-        <p>Doddampalayam, Tamil Nadu</p>
-        <p>India - 638451</p>
-      </div>
+  <div class="vcard">
+    <img src="praneshsa.jpg" alt="Pranesh S A's photo">
+    <div class="fn">Pranesh S A</div>
+    <div class="org">KTS TEX | KTS HANDLOOMS</div>
+    <div class="email">Personal Email: <a href="mailto:sapranesh27@gmail.com">sapranesh27@gmail.com</a></div>
+    <div class="email">Work Email: <a href="mailto:ktstexdplm@gmail.com">ktstexdplm@gmail.com</a></div>
+    <div class="email">Work Email: <a href="mailto:ktshandloomsdplm@gmail.com">ktshandloomsdplm@gmail.com</a></div>
+    <div class="tel">Cell: <a href="tel:7010052045">7010052045</a></div>
+    <div class="adr">
+      Address:
+      <div class="street-address">KTS Textile, 10/77, Rajiv Nagar</div>
+      <div class="locality">Doddampalayam</div>
+      <div class="region">Tamil Nadu</div>
+      <div class="postal-code">638451</div>
     </div>
-    <div class="right">
-      <button onclick="saveContact()">Save to Contacts</button>
-    </div>
-    <div class="contact">
-      <p><strong>Email:</strong></p>
-      <ul>
-        <li><a href="mailto:sapranesh27@gmail.com">sapranesh27@gmail.com</a></li>
-        <li><a href="mailto:ktstexdplm@gmail.com">ktstexdplm@gmail.com</a></li>
-        <li><a href="mailto:ktshandloomsdplm@gmail.com">ktshandloomsdplm@gmail.com</a></li>
-      </ul>
-      <p><strong>Phone:</strong> +91 7010052045</p>
-      <p><strong>Social Media:</strong></p>
-      <ul>
-        <li><a href="https://g.page/KTS-TEX">Website</a></li>
-        <li><a href="https://www.instagram.com/thatz.what.she.said">Instagram</a></li>
-        <li><a href="https://www.linkedin.com/in/praneshsa">LinkedIn</a></li>
-      </ul>
+    <div class="social">
+      <div class="url">Webpage: <a href="https://g.page/KTS-TEX">g.page/KTS-TEX</a></div>
+      <div class="instagram">Instagram: <a href="https://www.instagram.com/thatz.what.she.said">@thatz.what.she.said</a></div>
+      <div class="linkedin">LinkedIn: <a href="https://www.linkedin.com/in/praneshsa">in/praneshsa</a></div>
     </div>
   </div>
+
   <script>
+    // Save contact function for Android mobiles
     function saveContact() {
-      var contact = navigator.contacts.create();
-      contact.displayName = "Pranesh S A";
-      contact.nickname = "Pranesh";
-      contact.photos = [new ContactField('url', 'praneshsa.jpg', true)];
-      contact.emails = [
-        new ContactField('home', 'sapranesh27@gmail.com', true),
-        new ContactField('work', 'ktstexdplm@gmail.com', true),
-        new ContactField('work', 'ktshandloomsdplm@gmail.com', true)
-      ];
-      contact.phoneNumbers = [new ContactField("mobile", "+917010052045", true)];
-      contact.addresses = [
-        new ContactAddress(true, "home", "KTS Textile, 10/77, Rajiv Nagar", "Doddampalayam", "Tamil Nadu", "638451", "India")
-      ];
-      contact.urls = [new ContactField("website", "https://g.page/KTS-TEX", true)];
-      contact.save();
-      alert("Contact saved successfully!");
+      var vcard = document.querySelector('.vcard');
+      var blob = new Blob([vcard.outerHTML], {type: 'text/vcard'});
+      var url = URL.createObjectURL(blob);
+
+      var downloadLink = document.createElement('a');
+      downloadLink.href = url;
+      downloadLink.download = 'Pranesh S A.vcf';
+      downloadLink.click();
+
+      URL.revokeObjectURL(url);
     }
+  </script>
+
+  <button onclick="saveContact()">Save Contact</button>
+</body>
+</html>
